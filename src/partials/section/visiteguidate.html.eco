@@ -1,0 +1,40 @@
+<h2 class="section-title"><%= @labels['visiteguidate'] %></h2>
+<p>Scopri le bellezze, la storia e il territorio di Trezzo sull'Adda grazie alle nostre proposte di visite guidate.</p>
+
+<div class="schedule-tbl">
+  <table>
+	<thead>
+	  <tr>
+		<th class="schedule-description">Visita</th>
+		<th class="schedule-time">Quando</th>
+		<th class="schedule-time">Prezzo</th>
+	  </tr>
+	</thead>
+	<tbody>
+
+	  <% for visita in @visite: %>
+		  <tr>
+			<td class="schedule-slot">
+				<b><%= visita.cosa %></b><br/>
+				<%= visita.descrizione %>
+			  	<span class="speakers-company">
+			  		<em>Durata:</em> ~<%= visita.durata %>
+			  	</span>
+			</td>
+			<td class="schedule-description">
+				<em>Periodo:</em> <%= visita.periodo %><br/>
+				<em>Giorni:</em> <%= visita.quando %><br/>
+				<em>Orari:</em> <%= visita.orari %>
+				<br/><br />
+				<%= visita.gruppi %>
+			</td>
+			<td class="schedule-description">
+				<%= visita.prezzo %><br/><br/>
+				<em>Gruppi:</em> <%= visita.prezzogruppi %>
+			</td>
+		  </tr>
+	  <% end %>
+
+	</tbody>
+  </table>
+</div>

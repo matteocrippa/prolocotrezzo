@@ -1,0 +1,35 @@
+<h2 class="section-title"><%= @labels['eventi'] %></h2>
+
+<ul class="speakers-list">
+	<% for evento in @eventi: %>
+		
+		<li class="speakers-item">
+			
+			<span class="speaker-photo">
+				<a href="/img/<%= evento.immagine %>" data-lightbox="<%= evento.cosa %>" title="<%= evento.cosa %>"><img class="photo" src="/img/<%= evento.immagine %>" alt="<%= evento.cosa %>" /></a>
+			</span>
+			
+			<h3 class="speech-title">
+				
+				<span class="speech-time">
+					<%= evento.data %> • <%= evento.ora %>
+				</span>
+				
+				<span>
+					 &nbsp; » <%= evento.cosa %>
+				</span>
+			
+			</h3>
+			
+			<h3 class="speakers-name">
+				<span><em>dove:</em> <a href="http://maps.google.it/?q=<%= evento.dove %>" target="_blank"><%= evento.dove %></span></a>
+			</h3>
+			
+			<p class="speakers-bio">
+				<%= evento.descrizione %>
+			</p>
+			
+		</li>
+		
+	<% end %>
+</ul>

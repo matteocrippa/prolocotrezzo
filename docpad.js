@@ -2,186 +2,91 @@ module.exports = {
 
   prompts: false,
 
-  // These are variables will be accessible via our templates
   templateData: {
 
-    // Conference info
+    // configurazione
     conf: {
-      name: "Conference name",
-      description: "Conference description",
-      date: "November 15",
-      // If your event is free, just comment this line
-      price: "$100",
-      venue: "Coco Bongo",
-      address: "Boulevard Kukulcan, 30",
-      city: "Cancún",
-      state: "Quintana"
+      name: "Proloco Trezzo sull'Adda",
+      description: "Sito ufficiale della Proloco di Trezzo sull'Adda",
     },
 
-    // The Call To Action button at the header,
-    // If you don't want this, just remove the callToAction property.
-    callToAction: {
-        text: "Register now!",
-        link: "http://eventick.com.br"
-    },
-
-    // "Fork me on GitHub", if you don't want this, just remove the forkButton property
-    forkButton: {
-        repository: "https://github.com/braziljs/conf-boilerplate"
-    },
-
-    // Site info
+    // informazioni sito
     site: {
       theme: "yellow-swan",
       url: "http://braziljs.github.io/conf-boilerplate/",
-      googleanalytics: "UA-33656081-1"
+      googleanalytics: ""
     },
 
-    // Active sections on the website
-    // to deactivate comment out with '//'
-    // you can also change order here and it will reflect on page
+    // sezioni del sito
     sections: [
-      'about',
-      'location',
-      'speakers',
-      'schedule',
-      'sponsors',
-      'partners'
-      // 'contact'
+      'eventi',
+      'visiteguidate',
+      'agevolazioni',
+      //'storia',
+      'tesseramento',
+      'chisiamo',
+      'contatti'
     ],
 
-    // Labels which you can translate to other languages
+    // etichette sezioni
     labels: {
-      about: "About",
-      location: "Location",
-      speakers: "Speakers",
-      schedule: "Schedule",
-      sponsors: "Sponsors",
-      partners: "Partners",
-      contact: "Contact"
+      eventi: "Eventi",
+      visiteguidate: "Visite Guidate",
+      agevolazioni: "Agevolazioni",
+      //storia: "Storia",
+      tesseramento: "Tesseramento",
+      chisiamo: "Chi Siamo",
+      contatti: "Contatti"
     },
-
-    // The entire schedule
-    schedule: [
+    
+    // tipologie di visite
+    visite: [
       {
-        name: "Check-in / Breakfast",
-        time: "9h00"
+        cosa: 'Il Castello Visconteo',
+        orari: 'Partenza ore 15.00 e 17.00',
+        durata: '1 ora e mezza',
+        quando: 'Ogni domenica pomeriggio e festivi, senza prenotazione',
+        periodo: 'Marzo - Ottobre',
+        prezzo: 'Intero: €6,00 - Ridotto (6-12 anni): €3,00 - Gratuito sotto i 6 anni',
+        descrizione: 'La visita comprende la ricostruzione della tomba longobarda, i sotterranei, i resti del ponte e la salita alla torre.',
+        gruppi: 'Visite guidate per gruppi e scolaresche (max 25 persone), su prenotazione tutto l’anno, anche in notturna',
+        prezzogruppi: 'Adulti: €60,00 Scolaresche e Over 65: €45,00' 
       },
       {
-        name: "Linus Torvalds",
-        photo: "themes/yellow-swan/img/speaker.jpg",
-        bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-        company: "Linux Foundation",
-        link: {
-          href: "http://twitter.com/linus",
-          text: "@linus"
-        },
-        presentation: {
-          title: "Digging into a Linux Kernel",
-          description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-          time: "10h00"
-        }
+        cosa: 'La Centrale Idroelettrica Taccani',
+        quando: 'Su prenotazione Martedì, Mercoledì e Giovedì, senza prenotazione in occasione di aperture straordinarie della Centrale per eventi e manifestazioni.',
+        prezzo: 'Visita gratuita offerta da ENEL',
+        
       },
       {
-        name: "Bill Gates",
-        photo: "themes/yellow-swan/img/speaker.jpg",
-        bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-        company: "Microsoft",
-        link: {
-          href: "http://github.com/billy95",
-          text: "@billy95"
-        },
-        presentation: {
-          title: "Introducing Windows 12",
-          description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-          time: "11h00"
-        }
-      },
+        cosa: 'Il nostro Territorio',
+        quando: 'Tutto l\'anno su prenotazione per gruppi',
+        descrizione: 'Visite guidate al territorio (promontorio di Trezzo, centro storico, Crespi d’Adda)'
+      }
+      
+    ],
+    
+    // lista degli eventi
+    eventi: [
       {
-        name: "Lunch",
-        time: "12h00"
-      },
-      {
-        name: "Chuck Norris",
-        photo: "themes/yellow-swan/img/speaker.jpg",
-        bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-        company: "Delta Command",
-        link: {
-          href: "http://twitter.com/littlechuck",
-          text: "@littlechuck"
-        },
-        presentation: {
-          title: "How to kill a elephant with one finger",
-          description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-          time: "13h00"
-        }
-      },
-      {
-        name: "Steve Jobs",
-        photo: "themes/yellow-swan/img/speaker.jpg",
-        bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-        company: "Apple, Inc.",
-        link: {
-          href: "http://github.com/stevie",
-          text: "@stevie"
-        },
-        presentation: {
-          title: "Presenting iPad",
-          description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-          time: "14h00"
-        }
-      },
-      {
-        name: "Coffee-break",
-        time: "15h00"
-      },
-      {
-        name: "Mark Zuckerberg",
-        photo: "themes/yellow-swan/img/speaker.jpg",
-        bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-        company: "Facebook",
-        link: {
-          href: "http://twitter.com/zuck",
-          text: "@zuck"
-        },
-        presentation: {
-          title: "Revealing Facebook Secrets",
-          description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-          time: "16h00"
-        }
-      },
-      {
-        name: "Steve Wozniak",
-        photo: "themes/yellow-swan/img/speaker.jpg",
-        bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-        company: "Apple, Inc.",
-        link: {
-          href: "http://twitter.com/woz",
-          text: "@woz"
-        },
-        presentation: {
-          title: "Why do I prefer Android over iPhone",
-          description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-          time: "17h00"
-        }
+        data: '31/10/2013',
+        ora: '20:30 - 00:30',
+        cosa: 'Halloween al Castello',
+        dove: 'Castello Visconteo, Trezzo Sull\'Adda, MI', 
+        descrizione: 'Si avvicina la Notte più paurosa dell\'Anno e Pro Loco ha in serbo per Voi una serata da Brivido tra i Rudeli Vistonei! Oserete Voi sfidare gli spiriti che infestano il Castello?',
+        immagine: '2013-halloween.jpg'
       }
     ],
 
-    // List of Sponsors
-    sponsors: [
+    // agevolazioni
+    agevolazioni: [
       {
-        name: "Eventick",
-        logo: "themes/yellow-swan/img/sponsor.png",
-        url: "http://eventick.com.br"
-      }
-    ],
-
-    // List of Partners
-    partners: [
-      {
-        name: "BrazilJS",
-        logo: "themes/yellow-swan/img/partner.png",
-        url: "http://braziljs.org"
+        data: '29 e 30 Ottobre',
+        ora: '20:30',
+        cosa: 'Otello di Giuseppe Verdi',
+        dove: 'Teatro degli Arcimboldi Milano',
+        descrizione: 'Grazie alla convenzione con i teatri Arcimboldi e Dal Verme, la Pro Loco Trezzo offre ai propri soci la possibilità di andare a teatro a prezzo scontato, previa presentazione all\'ingresso della tessera associativa.',
+        immagine: '2013-otello.jpg'
       }
     ],
 
