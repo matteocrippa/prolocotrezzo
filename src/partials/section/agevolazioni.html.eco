@@ -6,7 +6,7 @@
 		<li class="speakers-item">
 
 			<span class="speaker-photo">
-				<a href="/img/<%= evento.immagine %>" data-lightbox="<%= evento.cosa %>" title="<%= evento.cosa %>"><img class="photo" src="/img/<%= evento.immagine %>" alt="<%= evento.cosa %>" /></a>
+				<a href="img/<%= evento.immagine %>" data-lightbox="<%= evento.cosa %>" title="<%= evento.cosa %>"><img class="photo" src="img/<%= evento.immagine %>" alt="<%= evento.cosa %>" /></a>
 			</span>
 
 			<h3 class="speech-title">
